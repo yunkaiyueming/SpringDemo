@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--相当于UserMapper接口的实现 namespace必须是UserMapper类路径-->
+<mapper namespace="com.myatispoint.PeopleMapper">
+    <!-- findById必须和接口中的方法名一样 返回一个User-->
+    <select id="findById" parameterType="String" resultType="com.myatispoint.People">
+        select * from people where id=#{id}
+    </select>
+
+    <!-- findById必须和接口中的方法名一样 返回一个User-->
+    <select id="getAllUser" resultType="com.myatispoint.People">
+        select * from people
+    </select>
+
+    <!-- 使用insert语句-->
+    <insert id="addUser" parameterType="com.myatispoint.People" useGeneratedKeys="true" keyProperty="id">
+        insert into people(name,age) values(#{name}, #{age})
+    </insert>
+
+    <update id="updateUser" parameterType="com.myatispoint.People" >
+        update people set name=#{name},age=#{age} where name=#{name}
+    </update>
+
+    <delete id="delUserById"  parameterType="String" >
+        delete from people where id=#{id}
+    </delete>
+
+</mapper>
