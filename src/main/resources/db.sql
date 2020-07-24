@@ -19,3 +19,17 @@ CREATE TABLE people(
    age  INT NOT NULL,
    PRIMARY KEY (id)
 );
+
+CREATE TABLE `user2` (
+  `uid` tinyint(2) NOT NULL AUTO_INCREMENT,
+  `uname` varchar(20) DEFAULT NULL,
+  `usex` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `item` (
+  `id` tinyint(2) NOT NULL AUTO_INCREMENT,
+  `itemid` varchar(20) DEFAULT NULL,
+  `num` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

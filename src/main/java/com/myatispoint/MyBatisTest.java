@@ -49,6 +49,7 @@ public class MyBatisTest {
     }
 
     //构建People sql
+    //测试使用mybatis orm
     public static void main(String[] args) {
         SqlSession sqlSession = getSessionFactory().openSession();
         PeopleMapper userMapper = sqlSession.getMapper(PeopleMapper.class);

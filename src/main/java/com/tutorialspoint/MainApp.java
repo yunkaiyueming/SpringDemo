@@ -54,6 +54,7 @@ public class MainApp {
         jc.getAddressProp();
     }
 
+    //测试使用spring 自动化model
     public static void main(String[] args) {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("mysql.xml");
